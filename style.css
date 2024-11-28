@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+
+:root {
+    --background-color: black;
+    --second-background-color: black;
+    --text-color: white;
+    --main-color: orange;
+}
+
+html {
+    font-size: 60%;
+    overflow-wrap: hidden;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: rgba(0, 0, 0, 3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+span {
+    color: white;
+    background: none;
+}
+
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid;
+}
+
+.gradiand-btn {
+    font-size: 1.8rem;
+    padding: 1rem 2 rem;
+    border-radius: 3rem;
+    background: linear-gradient(270deg, orange 10%, red 100%);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradiand-btn:hover {
+    transform: scale(1.05);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.home content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-content h3 {
+    margin: 1rem 0;
+    font-size: 4rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.home-img img {
+    width: 16vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+        0 0 50px var(--main-color),
+        0 0 100px var(--main-color);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--main-color);
+    background-color: var(--main-color);
+    transform: scale(1, 2)translate(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: black;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+        0 0 50px var(--main-color);
+}
+
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25 px transparent;
+}
+
+.btn-group a:nth-of-type(2) {
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+
+/* Container utama yang menggabungkan About dan Experience */
+.about-experience {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Mengurangi jarak antar box */
+    padding: 30px;
+    /* Menyesuaikan padding agar tidak terlalu besar */
+    background-color: #000;
+    /* Mengubah background menjadi hitam */
+    color: #fff;
+    /* Mengubah warna teks menjadi putih */
+    max-width: 1200px;
+    /* Membuat container lebih lebar */
+    margin: 0 auto;
+    /* Membuat container lebih rapi dengan posisi tengah */
+}
+
+/* Styling untuk About */
+.about {
+    flex: 1 1 48%;
+    /* Membuat box About lebih besar dan lebih lebar */
+    background-color: #333;
+    /* Memberikan warna latar belakang yang lebih gelap untuk About */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Memberikan bayangan lebih gelap */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about:hover {
+    transform: scale(1.05);
+}
+
+.about-img img {
+    width: 100%;
+    height: 250px;
+    /* Ukuran gambar tetap proporsional */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 80px;
+    /* Menambahkan margin atas untuk menurunkan posisi gambar */
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    /* Membuat ukuran font lebih besar */
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    /* Membuat ukuran font lebih besar */
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-content .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling untuk Experience */
+.experience {
+    flex: 1 1 48%;
+    /* Membuat box Experience lebih besar dan lebih lebar */
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.experience .heading {
+    font-size: 2rem;
+    /* Membuat ukuran font judul lebih besar */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-content ul li {
+    background-color: #444;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-content ul li:hover {
+    transform: translateX(10px);
+}
+
+.experience-content ul li strong {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.experience-content ul li p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Responsivitas untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .about-experience {
+        flex-direction: column;
+        gap: 15px;
+        /* Mengatur jarak antar box pada perangkat kecil */
+    }
+
+    .about,
+    .experience {
+        flex: 1 1 100%;
+    }
+
+    .about-img img {
+        height: 180px;
+        /* Mengurangi ukuran gambar di perangkat kecil */
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .experience .heading {
+        font-size: 1.8rem;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin: 5rem 0;
+}
+
+.services {
+    background-color: var(--background-color);
+    color: black;
+}
+
+.services h2 {
+    color: var(--text-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.services-box:hover {
+    background-color: var(--second-background-color);
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.services-info {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.services-info h4 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.services-info p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.services-info i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+.projects {
+    background-color: var(--second-background-color);
+}
+
+.projects-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* Membuat card bisa berpindah baris jika diperlukan */
+    justify-content: space-between;
+    /* Membuat jarak antar card */
+    gap: 1rem;
+    /* Menambahkan jarak antar card */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.projects-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background-color);
+    border: 2px solid var(--background-color);
+    border-radius: 1.5rem;
+    gap: 1rem;
+    padding: 1rem;
+    /* Kurangi padding untuk mengurangi tinggi */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: 0.3s ease;
+    width: 300px;
+    /* Menentukan lebar card */
+    height: auto;
+    /* Menyesuaikan tinggi dengan konten */
+}
+
+@media (max-width: 768px) {
+    .projects-box {
+        flex-direction: column;
+        /* Ubah ke vertikal pada layar kecil */
+        align-items: center;
+    }
+
+    .projects-card {
+        width: 80%;
+        /* Lebar card disesuaikan pada layar kecil */
+        margin-bottom: 1rem;
+    }
+}
+
+
+.projects-card:hover {
+    box-shadow: 0 0 15px var(--main-color),
+        0 0 25px var(--main-color);
+    transform: scale(1.02);
+}
+
+.projects-card img {
+    width: 100%;
+    /* Menyesuaikan gambar dengan lebar card */
+    height: 200px;
+    /* Mengatur tinggi gambar */
+    object-fit: cover;
+    /* Menjaga rasio aspek gambar */
+    border-radius: 1.5em;
+}
+
+
+.projects-card h3 {
+    font-size: 2.5rem;
+}
+
+.projects-card p {
+    font-size: 1.4rem;
+}
+
+
+
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: black;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Menata container skill */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    /* Menyebar skill secara merata */
+    flex-wrap: wrap;
+    /* Membungkus elemen jika terlalu banyak untuk satu baris */
+    gap: 20px;
+    /* Memberikan jarak antar elemen */
+    padding: 20px;
+}
+
+/* Menata setiap kotak skill */
+.skill-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex-basis: 18%;
+    /* Ukuran dasar untuk setiap elemen (bisa disesuaikan) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Menambahkan efek hover untuk skill */
+.skill-box:hover {
+    transform: scale(1.05);
+    /* Efek zoom */
+}
+
+/* Ikon keterampilan */
+.skill-icon i {
+    font-size: 40px;
+    color: #333;
+    /* Anda bisa mengganti warna sesuai kebutuhan */
+    margin-bottom: 10px;
+}
+
+/* Menyusun ikon dan teks dalam satu baris */
+.skill-box h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
